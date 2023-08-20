@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-web: node bot.js
+web: nodemon bot.js
 =======
-web: node bot.js
+web: nodemon bot.js
 >>>>>>> origin/main
