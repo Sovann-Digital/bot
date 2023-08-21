@@ -81,13 +81,14 @@ bot.action(/village_(.+)/, async (ctx) => {
 
             if (selectedVillage) {
                 const services = selectedVillage.Services;
-                const servicesText = services.map(service => `(${service.name})`).join('\n');
+                const servicesText = services.map(service => `• ${service.name}`).join('\n');
                 
                 // Create inline buttons for each service
                 const inlineButtons = services.map(service => Markup.button.callback(service.name, `service_${service.command}_${selectedVillage.name}`));
                 const inlineKeyboard = Markup.inlineKeyboard(inlineButtons, { columns: 1 });
 
-                await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard);
+                const message = `🗺 *សេវាកម្មដែលអាចផ្ដល់ជូន* ${selectedVillage.name}:\n\n${servicesText}\n\n⚠សូមទំនាក់ទំនងដោយមានការ⚠`;
+                await ctx.replyWithHTML(message, inlineKeyboard);
             } else {
                 console.log("Selected village not found.");
             }
