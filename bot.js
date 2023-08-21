@@ -121,37 +121,26 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                     .find(service => service.command === serviceCommand);
 
                 if (selectedService) {
-                    const { location, name: serviceName, phone } = selectedService;
+                    const { location, name: serviceName, phone, posterurl } = selectedService;
 
-                    if (location && typeof location === 'object') {
-                        const { latitude, longitude, address, telegram } = location;
+                    // ... (remaining code)
 
-                        let formattedPhoneNumbers = '';
-                        if (phone && phone.hotline) {
-                            formattedPhoneNumbers = Object.entries(phone.hotline)
-                                .filter(([provider, number]) => number)
-                                .map(([provider, number]) => `\n| - ${provider}: ${number}`)
-                                .join('');
-                        } else {
-                            formattedPhoneNumbers = 'មិនមានប្រព័ន្ធលេខទូរស័ព្ទសម្រាប់ទាក់ទង';
-                        }
-
-                        const locationLink = `https://maps.google.com/?q=${latitude},${longitude}`;
-                        const locationText = `ទីតាំងកន្លែងផ្ដល់សេវា: <a href="${locationLink}">View on Map</a>`;
-
-                        const message = `
-                            👮‍♂️កន្លែង ${serviceName} ដែលនៅជិតជាងគេនៅទីតាំង ${villageName}👮‍♂️:
-                            \n${address} 
-                            \nលេខទូរស័ព្ទទាន់ហេតុការណ៍:
-                            ${formattedPhoneNumbers}
-                            \nTelegram: ${phone.telegram}
-                            \n${locationText}
-                        `;
-                        await ctx.replyWithHTML(message);
-                        await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
-                    } else {
-                        console.log("Service location data is missing or not in the expected format.");
+                    const message = `
+                        👮‍♂️កន្លែង ${serviceName} ដែលនៅជិតជាងគេនៅទីតាំង ${villageName}👮‍♂️:
+                        \n${address} 
+                        \nលេខទូរស័ព្ទទាន់ហេតុការណ៍:
+                        ${formattedPhoneNumbers}
+                        \nTelegram: ${phone.telegram}
+                        \n${locationText}
+                    `;
+                    // await ctx.replyWithHTML(message);
+                    
+                    // Send the poster image
+                    if (posterurl) {
+                        await ctx.replyWithPhoto({ source: posterurl , captioin: message});
                     }
+
+                    await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                 } else {
                     console.log("Selected service not found.");
                 }
@@ -165,6 +154,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
+
 
 bot.settings((ctx) => {
     ctx.reply("Bot setting of command");
