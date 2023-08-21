@@ -35,7 +35,7 @@ bot.action(/commune_(.+)/, async (ctx) => {
 
         if (selectedCommune) {
             const villageButtons = selectedCommune.villages.map(village => Markup.button.callback(village.name+" (🏠)", `village_${village.command}`));
-            const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 3 });
+            const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
 
             await ctx.reply(`សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
         } else {
