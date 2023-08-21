@@ -148,6 +148,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             \nTelegram: ${phone.telegram}
                             \n${locationText}
                         `;
+                        await ctx.replyWithPhoto({ source: posterurl, caption: message });
                         await ctx.replyWithHTML(message);
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
