@@ -135,10 +135,6 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                     `;
                     await ctx.replyWithHTML(message);
                     
-                    // Send the poster image
-                    if (posterurl) {
-                        await ctx.replyWithPhoto({ source: posterurl , captioin: message});
-                    }
 
                     await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                 } else {
