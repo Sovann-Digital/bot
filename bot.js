@@ -54,8 +54,9 @@ bot.action(/commune_(.+)/, async (ctx) => {
         const selectedCommune = jsonData.data[0]?.Communes.find(commune => commune.name === selectedCommuneName);
 
         if (selectedCommune) {
-            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback(village.name+" (🏠)", `village_${village.command}`));
+            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠) "+village.name, `village_${village.command}`));
             const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
+            const backToCommuneButton = Markup.button.callback('⬅️ Back', 'back_to_commune');
 
             await ctx.reply(`សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
         } else {
@@ -81,7 +82,6 @@ bot.action(/village_(.+)/, async (ctx) => {
                 
                 // Create inline buttons for each service
                 const inlineButtons = services.map(service => Markup.button.callback(service.name, `service_${service.command}_${selectedVillage.name}`));
-                const backToCommuneButton = Markup.button.callback('⬅️ Back to Commune', 'back_to_commune');
                 inlineButtons.push(backToCommuneButton);
                 const inlineKeyboard = Markup.inlineKeyboard(inlineButtons, { columns: 1 });
 
