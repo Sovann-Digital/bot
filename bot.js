@@ -14,8 +14,8 @@ bot.start(async (ctx) => {
         const communes = jsonData.data[0]?.Communes;
 
         if (communes) {
-            const buttons = communes.map(commune => Markup.button.callback(commune.name, `commune_${commune.name}`));
-            const keyboard = Markup.inlineKeyboard(buttons+"(🏠)", { columns: 3 });
+            const buttons = communes.map(commune => Markup.button.callback(commune.name+"(🏠)", `commune_${commune.name}`));
+            const keyboard = Markup.inlineKeyboard(buttons, { columns: 3 });
 
             await ctx.reply('សូមជ្រើសរើសឃុំរបស់អ្នក:', keyboard);
         } else {
