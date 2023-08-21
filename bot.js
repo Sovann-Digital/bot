@@ -141,7 +141,6 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                         const locationText = `ទីតាំងកន្លែងផ្ដល់សេវា: <a href="${locationLink}">View on Map</a>`;
 
                         const message = `
-                            <img scr="${posterurl}">
                             👮‍♂️កន្លែង ${serviceName} ដែលនៅជិតជាងគេនៅទីតាំង ${villageName}👮‍♂️:
                             \n${address} 
                             \nលេខទូរស័ព្ទទាន់ហេតុការណ៍:
@@ -149,6 +148,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             \nTelegram: ${phone.telegram}
                             \n${locationText}
                         `;
+                        await ctx.replyWithPhoto(posterurl);
                         await ctx.replyWithHTML(message);
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
