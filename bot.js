@@ -133,10 +133,11 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                         \nTelegram: ${phone.telegram}
                         \n${locationText}
                     `;
-
-                    // Send the poster image with the message as caption
+                    await ctx.replyWithHTML(message);
+                    
+                    // Send the poster image
                     if (posterurl) {
-                        await ctx.replyWithPhoto({ source: posterurl, caption: message });
+                        await ctx.replyWithPhoto({ source: posterurl , captioin: message});
                     }
 
                     await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
@@ -153,7 +154,6 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
-
 
 
 bot.settings((ctx) => {
