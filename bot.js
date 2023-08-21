@@ -54,10 +54,13 @@ bot.action(/commune_(.+)/, async (ctx) => {
 
         if (selectedCommune) {
             const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠) " + village.name, `village_${village.command}`));
+            
+            const backToCommuneButton = Markup.button.callback('⬅️ Back', 'back_to_commune');
+            villageButtons.push(backToCommuneButton); // Adding the back button to the villageButtons array
+            
             const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
             
             await ctx.reply(`សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
-            villageKeyboard.push(Markup.inlineKeyboard('⬅️ Back', 'back_to_commune')); // Adding the back button to the keyboard
         } else {
             console.log("Selected commune not found.");
         }
@@ -65,6 +68,7 @@ bot.action(/commune_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
+
 
 bot.action(/village_(.+)/, async (ctx) => {
     try {
