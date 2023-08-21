@@ -125,7 +125,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                     const { location, name: serviceName, phone } = selectedService;
 
                     if (location && typeof location === 'object') {
-                        const { latitude, longitude, address, telegram } = location;
+                        const { latitude, longitude, address, posterurl} = location;
 
                         let formattedPhoneNumbers = '';
                         if (phone && phone.hotline) {
@@ -148,6 +148,9 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             \nTelegram: ${phone.telegram}
                             \n${locationText}
                         `;
+                        if (posterurl) {
+                            await ctx.replyWithPhoto({ source: posterurl, caption: message });
+                        }
                         await ctx.replyWithHTML(message);
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
