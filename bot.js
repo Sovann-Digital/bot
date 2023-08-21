@@ -68,7 +68,6 @@ bot.action(/commune_(.+)/, async (ctx) => {
     }
 });
 
-
 bot.action(/village_(.+)/, async (ctx) => {
     try {
         const villageCommand = ctx.match[1];
@@ -97,8 +96,6 @@ bot.action(/village_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
-
-
 
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
     try {
