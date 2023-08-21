@@ -1,0 +1,66 @@
+[
+    {
+      "Date": "18/08/2023",
+      "Communes": [
+        {
+          "name": "ឃុំស្ដៅ",
+          "villages": [
+            {
+              "name": "ភូមិស្ដៅ",
+              "command": "sdau",
+              "Services": [
+                {
+                  "name": "លេខសម្រាប់ទាក់ទងនិងអាជ្ញាធរដែនដី",
+                  "command": "government_sdau",
+                  "phone": {
+                    "hotline": {
+                      "smart": "+85516677462",
+                      "cellcard": "+85516677462",
+                      "metfone": "+85516677462"
+                    },
+                    "posterurl": "https://imgs.search.brave.com/feoYHpadxRJuoUy88IJIxK5Ur5RwRFMPakjR5jeyZGo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzk0Lzk1LzA2/LzM2MF9GXzI5NDk1/MDYxMF8wdVFZUDVl/V3lzaW9qc0VqUmdI/eWJYeTQxQUo3RXFV/NC5qcGc",
+                    "telegram": "@ambulance_sdau_bot"
+                  },
+                  "location": {
+                    "latitude": 11.5560,
+                    "longitude": 104.9282,
+                    "address": "Government Station, Sdau Village"
+                  }
+                },
+                {
+                  "name": "លេខសម្រាប់ឡានសង្គ្រោះបន្ទាន់",
+                  "command": "government_sdau",
+                  "phone": {
+                    "hotline": {
+                      "smart": "+85516677462",
+                      "cellcard": "+85516677462",
+                      "metfone": "+85516677462"
+                    },
+                    "posterurl": "https://imgs.search.brave.com/feoYHpadxRJuoUy88IJIxK5Ur5RwRFMPakjR5jeyZGo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzk0Lzk1LzA2/LzM2MF9GXzI5NDk1/MDYxMF8wdVFZUDVl/V3lzaW9qc0VqUmdI/eWJYeTQxQUo3RXFV/NC5qcGc",
+                    "telegram": "@ambulance_sdau_bot"
+                  },
+                  "location": {
+                    "latitude": 11.5560,
+                    "longitude": 104.9282,
+                    "address": "Government Station, Sdau Village"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ឃុំអណ្ដើកហែប"
+        },
+        {
+          "name": "ឃុំផ្លូវមាស"
+        },
+        {
+          "name": "ឃុំត្រែង"
+        },
+        {
+          "name": "ឃុំរស្មីសង្ហារ"
+        }
+      ]
+    }
+  ]
