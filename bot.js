@@ -14,26 +14,7 @@ bot.start(async (ctx) => {
         const communes = jsonData.data[0]?.Communes;
 
         if (communes) {
-            const buttons = communes.map(commune => Markup.button.callback(commune.name+" (🏘)", `commune_${commune.name}`));
-            const keyboard = Markup.inlineKeyboard(buttons, { columns: 2 });
-
-            await ctx.reply('សូមជ្រើសរើសឃុំរបស់អ្នក:', keyboard);
-        } else {
-            console.log("Commune data not found.");
-        }
-    } catch (error) {
-        console.error('Error:', error);
-    }
-});
-
-bot.action('back_to_commune', async (ctx) => {
-    ctx.deleteMessage();
-    try {
-        const jsonData = await axios.get(DATA_URL);
-        const communes = jsonData.data[0]?.Communes;
-
-        if (communes) {
-            const buttons = communes.map(commune => Markup.button.callback(commune.name + " (🏘)", `commune_${commune.name}`));
+            const buttons = communes.map(commune => Markup.button.callback(commune.name, `commune_${commune.name}`));
             const keyboard = Markup.inlineKeyboard(buttons, { columns: 3 });
 
             await ctx.reply('សូមជ្រើសរើសឃុំរបស់អ្នក:', keyboard);
@@ -53,13 +34,9 @@ bot.action(/commune_(.+)/, async (ctx) => {
         const selectedCommune = jsonData.data[0]?.Communes.find(commune => commune.name === selectedCommuneName);
 
         if (selectedCommune) {
-            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠) " + village.name, `village_${village.command}`));
-            
-            const backToCommuneButton = Markup.button.callback('⬅️ Back', 'back_to_commune');
-            villageButtons.push(backToCommuneButton); // Adding the back button to the villageButtons array
-            
-            const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
-            
+            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback(village.name, `village_${village.command}`));
+            const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 3 });
+
             await ctx.reply(`សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
         } else {
             console.log("Selected commune not found.");
@@ -68,7 +45,6 @@ bot.action(/commune_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
-
 
 bot.action(/village_(.+)/, async (ctx) => {
     try {
@@ -81,14 +57,13 @@ bot.action(/village_(.+)/, async (ctx) => {
 
             if (selectedVillage) {
                 const services = selectedVillage.Services;
-                const servicesText = services.map(service => `• ${service.name}`).join('\n');
+                const servicesText = services.map(service => `(${service.name})`).join('\n');
                 
                 // Create inline buttons for each service
                 const inlineButtons = services.map(service => Markup.button.callback(service.name, `service_${service.command}_${selectedVillage.name}`));
                 const inlineKeyboard = Markup.inlineKeyboard(inlineButtons, { columns: 1 });
 
-                const message = `🗺 សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n\n${servicesText}\n\n⚠សូមទំនាក់ទំនងដោយមានការ⚠`;
-                await ctx.replyWithHTML(message, inlineKeyboard);
+                await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard);
             } else {
                 console.log("Selected village not found.");
             }
@@ -99,8 +74,6 @@ bot.action(/village_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
-
-
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
     try {
         const serviceCommand = ctx.match[1];
@@ -125,7 +98,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                     const { location, name: serviceName, phone } = selectedService;
 
                     if (location && typeof location === 'object') {
-                        const { latitude, longitude, address, posterurl} = location;
+                        const { latitude, longitude, address, telegram } = location;
 
                         let formattedPhoneNumbers = '';
                         if (phone && phone.hotline) {
@@ -148,7 +121,6 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             \nTelegram: ${phone.telegram}
                             \n${locationText}
                         `;
-                        await bot.telegram.sendPhoto(ctx.chat.id, { source: posterurl }, { caption: message });
                         await ctx.replyWithHTML(message);
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
