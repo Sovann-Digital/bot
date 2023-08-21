@@ -14,7 +14,7 @@ bot.start(async (ctx) => {
         const communes = jsonData.data[0]?.Communes;
 
         if (communes) {
-            const buttons = communes.map(commune => Markup.button.callback(commune.name+"(🏠)", `commune_${commune.name}`));
+            const buttons = communes.map(commune => Markup.button.callback(commune.name+" (🏘)", `commune_${commune.name}`));
             const keyboard = Markup.inlineKeyboard(buttons, { columns: 3 });
 
             await ctx.reply('សូមជ្រើសរើសឃុំរបស់អ្នក:', keyboard);
@@ -34,7 +34,7 @@ bot.action(/commune_(.+)/, async (ctx) => {
         const selectedCommune = jsonData.data[0]?.Communes.find(commune => commune.name === selectedCommuneName);
 
         if (selectedCommune) {
-            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback(village.name, `village_${village.command}`));
+            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback(village.name+" (🏠)", `village_${village.command}`));
             const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 3 });
 
             await ctx.reply(`សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
