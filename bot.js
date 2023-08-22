@@ -122,12 +122,12 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             \nTelegram: ${phone.telegram}
                             \n${locationText}
                         `;
-                        await ctx.replyWithHTML(message);
+                        // await ctx.replyWithHTML(message);
 
                         // Reply with the service's poster image if available
                         if (posterurl) {
                             try {
-                                await ctx.replyWithPhoto({ url: posterurl }); // Send the poster image
+                                await ctx.replyWithPhoto({ url: posterurl },{caption: message}); // Send the poster image
                             } catch (error) {
                                 console.error('Error sending poster photo:', error);
                             }
