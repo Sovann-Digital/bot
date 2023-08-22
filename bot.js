@@ -123,6 +123,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                         `;
                         await ctx.replyWithHTML(message);
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
+                        return ctx.replyWithPhoto({source: PHOTO_URL});
                     } else {
                         console.log("Service location data is missing or not in the expected format.");
                     }
