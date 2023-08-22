@@ -74,6 +74,7 @@ bot.action(/village_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
+
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
     try {
         const serviceCommand = ctx.match[1];
@@ -95,7 +96,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                     .find(service => service.command === serviceCommand);
 
                 if (selectedService) {
-                    const { location, name: serviceName, phone } = selectedService;
+                    const { location, name: serviceName, phone, posterurl } = selectedService;  // Extract posterurl here
 
                     if (location && typeof location === 'object') {
                         const { latitude, longitude, address, telegram } = location;
@@ -122,6 +123,16 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             \n${locationText}
                         `;
                         await ctx.replyWithHTML(message);
+
+                        // Reply with the service's poster image if available
+                        if (posterurl) {
+                            try {
+                                await ctx.replyWithPhoto({ url: posterurl }); // Send the poster image
+                            } catch (error) {
+                                console.error('Error sending poster photo:', error);
+                            }
+                        }
+                        console.log(address)
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
                         console.log("Service location data is missing or not in the expected format.");
@@ -138,10 +149,6 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
     } catch (error) {
         console.error('Error:', error);
     }
-});
-
-bot.settings((ctx) => {
-    ctx.reply("Bot setting of command");
 });
 
 bot.launch();
