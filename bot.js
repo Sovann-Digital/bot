@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const bot = new Telegraf('6307148351:AAEerLWT4UWMWJZMt5d0X4NigbYewGr0wEk');
 const DATA_URL = 'https://sovann-digital.github.io/sdau-data/data/data-sdau.json';
-const PHOTO_URL = 'https://imgs.search.brave.com/1ceNxYMVBSYwbGpdRw2Es-AyucQw-FP8o2ciL7ep7CY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjE1/NTgyNDAyL3Bob3Rv/L21lZXJrYXQtY2F0/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1haEVRaEp5aVdO/Yk1VdUdscWZsbktr/dXpyRU5iM0h4UTZi/NU9Hc29PRkxJPQ';
+const PHOTO_URL = 'https://sovann-digital.github.io/sdau-data/images/poster-start.png';
 
 
 bot.start(async (ctx) => {
@@ -127,7 +127,8 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                             } catch (error) {
                                 console.error('Error sending poster photo:', error);
                             }
-                        }                        await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
+                        }                        
+                        await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
                         console.log("Service location data is missing or not in the expected format.");
                     }
