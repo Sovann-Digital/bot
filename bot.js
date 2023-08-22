@@ -26,25 +26,6 @@ bot.start(async (ctx) => {
     }
 });
 
-bot.action('back_to_commune', async (ctx) => {
-    ctx.deleteMessage();
-    try {
-        const jsonData = await axios.get(DATA_URL);
-        const communes = jsonData.data[0]?.Communes;
-
-        if (communes) {
-            const buttons = communes.map(commune => Markup.button.callback("(🏘)"+commune.name, `commune_${commune.name}`));
-            const keyboard = Markup.inlineKeyboard(buttons, { columns: 2 });
-
-            await ctx.reply('(🗺)សូមជ្រើសរើសឃុំរបស់អ្នក:', keyboard);
-        } else {
-            console.log("Commune data not found.");
-        }
-    } catch (error) {
-        console.error('Error:', error);
-    }
-});
-
 bot.action(/commune_(.+)/, async (ctx) => {
     ctx.deleteMessage();
     try {
@@ -56,9 +37,6 @@ bot.action(/commune_(.+)/, async (ctx) => {
             const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠)"+village.name, `village_${village.command}`));
             const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 3 });
 
-            const backToCommuneButton = Markup.button.callback('⬅️ Back', 'back_to_commune');
-            villageButtons.push(backToCommuneButton); // Adding the back button to the villageButtons array
-            
             await ctx.reply(`(🗺)សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
         } else {
             console.log("Selected commune not found.");
