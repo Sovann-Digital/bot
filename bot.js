@@ -114,26 +114,20 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                         const locationLink = `https://maps.google.com/?q=${latitude},${longitude}`;
                         const locationText = `ទីតាំងកន្លែងផ្ដល់សេវា: <a href="${locationLink}">View on Map</a>`;
 
-                        const message = `
-                            👮‍♂️កន្លែង ${serviceName} ដែលនៅជិតជាងគេនៅទីតាំង ${villageName}👮‍♂️:
-                            \n${address} 
-                            \nលេខទូរស័ព្ទទាន់ហេតុការណ៍:
-                            ${formattedPhoneNumbers}
-                            \nTelegram: ${phone.telegram}
-                            \n${locationText}
-                        `;
-                        // await ctx.replyWithHTML(message);
-
-                        // Reply with the service's poster image if available
                         if (posterurl) {
                             try {
-                                await ctx.replyWithPhoto({ url: posterurl },{caption: message}); // Send the poster image
+                                const caption = `
+                                    <b>${serviceName}</b>
+                                    \n<i>${address}</i>
+                                    \n<b>លេខទូរស័ព្ទទាន់ហេតុការណ៍:</b>${formattedPhoneNumbers}
+                                    \n<b>Telegram:</b> ${phone.telegram}
+                                    \n${locationText}
+                                `;
+                                await ctx.replyWithPhoto({ url: posterurl }, { caption, parse_mode: 'HTML' }); // Send the poster image with caption
                             } catch (error) {
                                 console.error('Error sending poster photo:', error);
                             }
-                        }
-                        console.log(address)
-                        await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
+                        }                        await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
                         console.log("Service location data is missing or not in the expected format.");
                     }
