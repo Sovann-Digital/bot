@@ -10,7 +10,7 @@
               "command": "Sdau",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -70,7 +70,7 @@
               "command": "Banang",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -130,7 +130,7 @@
               "command": "Chamkar_Lmut",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -190,7 +190,7 @@
               "command": "Boeng_Ampil",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -250,7 +250,7 @@
               "command": "Dangkot",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -310,7 +310,7 @@
               "command": "Doun_Meay",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -370,7 +370,7 @@
               "command": "Baribour",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
@@ -430,7 +430,7 @@
               "command": "Kouk_Choar",
               "Services": [
                 {
-                  "name": "នគោបាល",
+                  "name": "នគរបាល",
                   "command": "police_sdau",
                   "phone": {
                     "hotline": {
