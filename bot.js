@@ -140,10 +140,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                                     \n<b>Telegram:</b> ${phone.telegram}
                                     \n${locationText}
                                 `;
-                                const cancelButton = Markup.button.callback('Cancel ❌', 'cancel'); // Add the cancel button
-                                const inlineKeyboard = Markup.inlineKeyboard([cancelButton], { columns: 1 }); // Include the cancel button
-
-                                await ctx.replyWithPhoto({ url: posterurl }, { caption, parse_mode: 'HTML', reply_markup: inlineKeyboard }); // Include the inlineKeyboard in the reply
+                                await ctx.replyWithPhoto({ url: posterurl }, { caption, parse_mode: 'HTML'}); // Include the inlineKeyboard in the reply
                             } catch (error) {
                                 console.error('Error sending poster photo:', error);
                             }
