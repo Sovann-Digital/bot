@@ -27,7 +27,7 @@ bot.start(async (ctx) => {
 });
 
 bot.action(/commune_(.+)/, async (ctx) => {
-    ctx.deleteMessage();
+    // ctx.deleteMessage();
     try {
         const selectedCommuneName = ctx.match[1];
         const jsonData = await axios.get(DATA_URL);
@@ -39,6 +39,7 @@ bot.action(/commune_(.+)/, async (ctx) => {
 
             await ctx.reply(`(🗺)សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
         } else {
+            await ctx.reply(`fuck you we don't have it! idot.`)
             console.log("Selected commune not found.");
         }
     } catch (error) {
@@ -62,10 +63,13 @@ bot.action(/village_(.+)/, async (ctx) => {
                 // Create inline buttons for each service
                 const inlineButtons = services.map(service => Markup.button.callback(service.name, `service_${service.command}_${selectedVillage.name}`));
                 const inlineKeyboard = Markup.inlineKeyboard(inlineButtons, { columns: 1 });
-
-                await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard);
+                const cancelButtons = services.map(service => Markup.button.callback("cancel", `cancel`));
+                const cancel = Markup.inlineKeyboard(cancelButtons, { columns: 1 });
+                
+                await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard, cancel);
             } else {
                 console.log("Selected village not found.");
+                await ctx.reply(`sorry we don't have data yet!`); // Add this line
             }
         } else {
             console.log("Commune data not found.");
@@ -73,6 +77,9 @@ bot.action(/village_(.+)/, async (ctx) => {
     } catch (error) {
         console.error('Error:', error);
     }
+});
+bot.action('cancel', async (ctx) => {
+    await ctx.deleteMessage();
 });
 
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
@@ -134,6 +141,7 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                     }
                 } else {
                     console.log("Selected service not found.");
+                    // await ctx.reply(`sorry we don't have data yet!`);
                 }
             } else {
                 console.log("Selected village not found.");
