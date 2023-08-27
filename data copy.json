@@ -127,7 +127,7 @@
             },
             {
               "name": "ភូមិចំការល្មុត",
-              "command": "Chamkar_Lmut",
+              "command": "ChamkarLmut",
               "Services": [
                 {
                   "name": "នគរបាល",
@@ -488,16 +488,28 @@
           ]
         },
         {
-          "name": "ឃុំអណ្ដើកហែប"
+          "name": "ឃុំអណ្ដើកហែប",
+          "villages": [{
+            
+          }]
         },
         {
           "name": "ឃុំផ្លូវមាស"
+          ,"villages": [{
+            
+          }]
         },
         {
           "name": "ឃុំត្រែង"
+          ,"villages": [{
+            
+          }]
         },
         {
           "name": "ឃុំរស្មីសង្ហារ"
+          ,"villages": [{
+            
+          }]
         }
       ]
     }
