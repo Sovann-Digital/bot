@@ -5,7 +5,6 @@ const bot = new Telegraf('6307148351:AAEerLWT4UWMWJZMt5d0X4NigbYewGr0wEk');
 const DATA_URL = 'https://sovann-digital.github.io/sdau-data/data/data-sdau.json';
 const PHOTO_URL = 'https://sovann-digital.github.io/sdau-data/images/poster-start.png';
 
-
 bot.start(async (ctx) => {
     try {
         await ctx.replyWithPhoto({ url: PHOTO_URL }, { caption: '👇សូមជ្រើសរើសឃុំរបស់អ្នកក្នុងស្រុករតនមណ្ឌល' });
@@ -14,7 +13,7 @@ bot.start(async (ctx) => {
         const communes = jsonData.data[0]?.Communes;
 
         if (communes) {
-            const buttons = communes.map(commune => Markup.button.callback("(🏘)"+commune.name, `commune_${commune.name}`));
+            const buttons = communes.map(commune => Markup.button.callback("(🏘)" + commune.name, `commune_${commune.name}`));
             const keyboard = Markup.inlineKeyboard(buttons, { columns: 2 });
 
             await ctx.reply('(🗺)សូមជ្រើសរើសឃុំរបស់អ្នក:', keyboard);
@@ -27,19 +26,34 @@ bot.start(async (ctx) => {
 });
 
 bot.action(/commune_(.+)/, async (ctx) => {
-    // ctx.deleteMessage();
     try {
         const selectedCommuneName = ctx.match[1];
         const jsonData = await axios.get(DATA_URL);
         const selectedCommune = jsonData.data[0]?.Communes.find(commune => commune.name === selectedCommuneName);
 
         if (selectedCommune) {
-            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠)"+village.name, `village_${village.command}`));
-            const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
+            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠)" + village.name, `village_${village.command}`));
+
+            // Create the cancel button
+            const cancelButton = Markup.button.callback('Cancel ❌', 'cancel');
+
+            // Construct the keyboard with button rows
+            const buttonRows = [];
+            for (let i = 0; i < villageButtons.length; i += 2) {
+                const row = [villageButtons[i]];
+                if (i + 1 < villageButtons.length) {
+                    row.push(villageButtons[i + 1]);
+                }
+                buttonRows.push(row);
+            }
+            // Add the cancel button as a separate row
+            buttonRows.push([cancelButton]);
+
+            const villageKeyboard = Markup.inlineKeyboard(buttonRows);
 
             await ctx.reply(`(🗺)សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
         } else {
-            await ctx.reply(`fuck you we don't have it! idot.`)
+            await ctx.reply(`Sorry, we don't have information for the selected commune.`);
             console.log("Selected commune not found.");
         }
     } catch (error) {
@@ -59,17 +73,16 @@ bot.action(/village_(.+)/, async (ctx) => {
             if (selectedVillage) {
                 const services = selectedVillage.Services;
                 const servicesText = services.map(service => `(${service.name})`).join('\n');
-                
+
                 // Create inline buttons for each service
                 const inlineButtons = services.map(service => Markup.button.callback(service.name, `service_${service.command}_${selectedVillage.name}`));
-                const inlineKeyboard = Markup.inlineKeyboard(inlineButtons, { columns: 1 });
-                const cancelButtons = services.map(service => Markup.button.callback("cancel", `cancel`));
-                const cancel = Markup.inlineKeyboard(cancelButtons, { columns: 1 });
-                
-                await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard, cancel);
+                const cancelButton = Markup.button.callback('Cancel ❌', 'cancel'); // Add the cancel button
+                const inlineKeyboard = Markup.inlineKeyboard([...inlineButtons, cancelButton], { columns: 1 }); // Include the cancel button
+
+                await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard);
             } else {
                 console.log("Selected village not found.");
-                await ctx.reply(`sorry we don't have data yet!`); // Add this line
+                await ctx.reply(`Sorry, we don't have data yet!`);
             }
         } else {
             console.log("Commune data not found.");
@@ -78,19 +91,16 @@ bot.action(/village_(.+)/, async (ctx) => {
         console.error('Error:', error);
     }
 });
-bot.action('cancel', async (ctx) => {
-    await ctx.deleteMessage();
-});
 
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
     try {
         const serviceCommand = ctx.match[1];
         const villageName = ctx.match[2];
-        
+
         // Load JSON data
         const response = await axios.get(DATA_URL);
         const jsonData = response.data;
-        
+
         const communes = jsonData[0]?.Communes;
 
         if (communes) {
@@ -130,18 +140,21 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
                                     \n<b>Telegram:</b> ${phone.telegram}
                                     \n${locationText}
                                 `;
-                                await ctx.replyWithPhoto({ url: posterurl }, { caption, parse_mode: 'HTML' }); // Send the poster image with caption
+                                const cancelButton = Markup.button.callback('Cancel ❌', 'cancel'); // Add the cancel button
+                                const inlineKeyboard = Markup.inlineKeyboard([cancelButton], { columns: 1 }); // Include the cancel button
+
+                                await ctx.replyWithPhoto({ url: posterurl }, { caption, parse_mode: 'HTML', reply_markup: inlineKeyboard }); // Include the inlineKeyboard in the reply
                             } catch (error) {
                                 console.error('Error sending poster photo:', error);
                             }
-                        }                        
+                        }
                         await ctx.replyWithHTML("ព័ត៌មានបន្ថែមពីយើងខ្ញុំ: <a href='https://t.me/sdaudigital'>Link</a>")
                     } else {
                         console.log("Service location data is missing or not in the expected format.");
                     }
                 } else {
                     console.log("Selected service not found.");
-                    // await ctx.reply(`sorry we don't have data yet!`);
+                    // await ctx.reply(`Sorry, we don't have data yet!`);
                 }
             } else {
                 console.log("Selected village not found.");
@@ -152,6 +165,11 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
     } catch (error) {
         console.error('Error:', error);
     }
+});
+
+// Handle the cancel button action
+bot.action('cancel', async (ctx) => {
+    await ctx.deleteMessage();
 });
 
 bot.launch();
