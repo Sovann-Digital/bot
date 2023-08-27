@@ -127,7 +127,7 @@
             },
             {
               "name": "ភូមិចំការល្មុត",
-              "command": "Chamkar_Lmut",
+              "command": "ChamkarLmut",
               "Services": [
                 {
                   "name": "នគរបាល",
