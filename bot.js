@@ -75,6 +75,11 @@ bot.action(/village_(.+)/, async (ctx) => {
     }
 });
 
+// Handle the cancel button action
+bot.action('cancel', async (ctx) => {
+    await ctx.deleteMessage();
+});
+
 
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
     try {
