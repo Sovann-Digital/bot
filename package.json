@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "axios": "^1.4.0",
+    "axios": "^1.5.0",
     "better-sqlite3": "^8.5.2",
+    "googleapis": "^126.0.1",
     "makeup": "^1.0.1",
     "sqlite3": "^5.1.6",
     "telegraf": "^4.12.2",
