@@ -10,40 +10,40 @@
               "command": "Sdau",
               "Services": [
                 {
-                  "name": "មេឃុំ(👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "មេភូមិ(👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -106,40 +106,40 @@
               "command": "Banang",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -202,40 +202,40 @@
               "command": "Chamkar_Lmut",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -298,40 +298,40 @@
               "command": "Boeng_Ampil",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -394,40 +394,40 @@
               "command": "Dangkot",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -490,40 +490,40 @@
               "command": "Doun_Meay",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -586,40 +586,40 @@
               "command": "Baribour",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
@@ -682,40 +682,40 @@
               "command": "Kouk_Choar",
               "Services": [
                 {
-                  "name": "អាជ្ញាធរ(មេឃុំ👨‍⚖️)",
-                  "command": "commune_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
-                  "name": "អាជ្ញាធរ(មេភូមិ👨‍⚖️)",
-                  "command": "village_sdau",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "commune_sdau",
+                    "phone": {
+                        "hotline": {
+                            "smart": "+85516677462",
+                            "cellcard": "+85516677462",
+                            "metfone": "+85516677462"
+                        },
+                        "telegram": "@ambulance_sdau_bot"
                     },
-                    "telegram": "@ambulance_sdau_bot"
-                  },
-                  "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Sdau Village"
-                  }
+                    "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                        "latitude": 11.5560,
+                        "longitude": 104.9282,
+                        "address": "Ambulance Station, Sdau Village"
+                    }
                 },
                 {
                   "name": "នគរបាល(👮‍♂️)",
