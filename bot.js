@@ -27,17 +27,22 @@ bot.start(async (ctx) => {
 });
 
 bot.action(/commune_(.+)/, async (ctx) => {
-    // ctx.deleteMessage();
     try {
         const selectedCommuneName = ctx.match[1];
         const jsonData = await axios.get(DATA_URL);
         const selectedCommune = jsonData.data[0]?.Communes.find(commune => commune.name === selectedCommuneName);
 
         if (selectedCommune) {
-            const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠)"+village.name, `village_${village.command}`));
-            const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
+            // Check if the commune has villages
+            if (selectedCommune.villages && selectedCommune.villages.length > 0) {
+                const villageButtons = selectedCommune.villages.map(village => Markup.button.callback("(🏠)" + village.name, `village_${village.command}`));
+                const villageKeyboard = Markup.inlineKeyboard(villageButtons, { columns: 2 });
 
-            await ctx.reply(`(🗺)សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
+                await ctx.reply(`(🗺)សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
+            } else {
+                // Send a message indicating there is no data for villages in this commune
+                await ctx.reply(`មិនមានទិន្នន័យសម្រាប់ភូមិនេះនៅឡើយ។`);
+            }
         } else {
             console.log("Selected commune not found.");
         }
