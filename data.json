@@ -11,7 +11,7 @@
             "Services": [
               {
                   "name": "មេឃុំ(👨‍⚖️)",
-                  "command": "commune_sdau_mayor",
+                  "command": "sdau_mayor",
                   "phone": {
                       "hotline": {
                           "smart": "+85516677462",
@@ -20,7 +20,7 @@
                       },
                       "telegram": "@ambulance_sdau_bot"
                   },
-                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor_commune.png",
                   "location": {
                       "latitude": 11.5560,
                       "longitude": 104.9282,
@@ -29,7 +29,7 @@
               },
               {
                   "name": "មេភូមិ(👨‍⚖️)",
-                  "command": "commune_sdau_chief",
+                  "command": "sdau_chief",
                   "phone": {
                       "hotline": {
                           "smart": "+85516677462",
@@ -38,7 +38,7 @@
                       },
                       "telegram": "@ambulance_sdau_bot"
                   },
-                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayor_village.png",
                   "location": {
                       "latitude": 11.5560,
                       "longitude": 104.9282,

@@ -65,8 +65,15 @@ bot.action(/village_(.+)/, async (ctx) => {
                 const servicesText = services.map(service => `(${service.name})`).join('\n');
                 
                 const inlineButtons = services.map(service => Markup.button.callback(service.name, `service_${service.command}_${selectedVillage.name}`));
+                
+                // Add two additional buttons for "ប៉ូលីសចរាចរណ៍" and "ប៉ូលីសសង្គ្រោះបន្ទាន់"
+                const additionalButtons = [
+                    Markup.button.callback("ប៉ូលីសចរាចរណ៍", "additional_service_1"),
+                    Markup.button.callback("ប៉ូលីសសង្គ្រោះបន្ទាន់", "additional_service_2"),
+                ];
+
                 const cancelButton = Markup.button.callback('មិនយក ❌', 'cancel'); // Add the cancel button
-                const inlineKeyboard = Markup.inlineKeyboard([...inlineButtons, cancelButton], { columns: 1 }); // Include the cancel button
+                const inlineKeyboard = Markup.inlineKeyboard([...inlineButtons, ...additionalButtons, cancelButton], { columns: 1 }); // Include the additional buttons and cancel button
 
                 await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard);
             } else {
