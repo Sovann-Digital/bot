@@ -3,122 +3,168 @@
       "Date": "18/08/2023",
       "Communes": [
         {
-          "name": "ឃុំអណ្ដើកហែប",
+          "name": "ឃុំស្ដៅ",
           "villages": [
             {
-              "name": "ភូមិទន្សាន់",
-              "command": "Tonsane",
+              "name": "ភូមិស្ដៅ",
+              "command": "Sdau1",
               "Services": [
-                {
-                  "name": "មេឃុំ(👨‍⚖️)",
-                  "command": "commune_tonsane",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677462",
-                      "cellcard": "+85516677462",
-                      "metfone": "+85516677462"
+                  {
+                    "name": "សាលាស្រុក(🏫)",
+                    "command": "school_sdau",
+                    "phone": {
+                      "hotline": {
+                        "smart": "+85516677464",
+                        "cellcard": "+85516677464",
+                        "metfone": "+85516677464"
+                      },
+                      "telegram": "@school_sdau_bot"
                     },
-                    "telegram": "@ambulance_tonsane_bot"
+                    "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                      "latitude": 11.5562,
+                      "longitude": 104.9284,
+                      "address": "Commune School, Sdau Village"
+                    }
                   },
-                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Tonsane Village"
+                {
+                    "name": "មេឃុំ(👨‍⚖️)",
+                    "command": "communes_sdau_mayor",
+                    "phone": {
+                      "hotline": {
+                        "smart": "+85516677462",
+                        "cellcard": "+85516677462",
+                        "metfone": "+85516677462"
+                      },
+                      "telegram": "@ambulance_sdau_bot"
+                    },
+                    "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                      "latitude": 11.5560,
+                      "longitude": 104.9282,
+                      "address": "Ambulance Station, Sdau Village"
+                    }
+                  },
+                {
+                    "name": "មេភូមិ(👨‍⚖️)",
+                    "command": "village_sdau_mayor",
+                    "phone": {
+                      "hotline": {
+                        "smart": "+85516677462",
+                        "cellcard": "+85516677462",
+                        "metfone": "+85516677462"
+                      },
+                      "telegram": "@ambulance_sdau_bot"
+                    },
+                    "posterurl":"https://sovann-digital.github.io/sdau-data/images/mayor.png",
+                    "location": {
+                      "latitude": 11.5560,
+                      "longitude": 104.9282,
+                      "address": "Ambulance Station, Sdau Village"
+                    }
+                  },
+                {
+                    "name": "នគរបាល(👮‍♂️)",
+                    "command": "police_sdau",
+                    "phone": {
+                      "hotline": {
+                        "smart": "+85516677462",
+                        "cellcard": "+85516677462",
+                        "metfone": "+85516677462"
+                      },
+                      "telegram": "@ambulance_sdau_bot"
+                    },
+                    "posterurl":"https://sovann-digital.github.io/sdau-data/images/police.png",
+                    "location": {
+                      "latitude": 11.5560,
+                      "longitude": 104.9282,
+                      "address": "Ambulance Station, Sdau Village"
+                    }
+                  },
+                  {
+                    "name": "សេវាកម្មមុខងារ(🏥)",
+                    "command": "healthcare_sdau",
+                    "phone": {
+                      "hotline": {
+                        "smart": "+85516677463",
+                        "cellcard": "+85516677463",
+                        "metfone": "+85516677463"
+                      },
+                      "telegram": "@healthcare_sdau_bot"
+                    },
+                    "posterurl":"https://sovann-digital.github.io/sdau-data/images/hospital.png",
+                    "location": {
+                      "latitude": 11.5561,
+                      "longitude": 104.9283,
+                      "address": "Healthcare Center, Sdau Village"
+                    }
                   }
-                }
+              ]
+            },
+            {
+              "name": "ភូមិបាណង់",
+              "command": "Sdau2",
+              "Services": [
+              ]
+            },
+            {
+              "name": "ភូមិចំការល្មុត",
+              "command": "Sdau3",
+              "Services": [
+              ]
+            },
+            {
+              "name": "ភូមិបឹងអំពិល",
+              "command": "Sdau4",
+              "Services": [
+              ]
+            },
+            {
+              "name": "ភូមិដង្គត់",
+              "command": "Sdau5",
+              "Services": [
+              ]
+            },
+            {
+              "name": "ភូមិដូនមាយ",
+              "command": "Sdau6",
+              "Services": [
+              ]
+            },
+            {
+              "name": "ភូមិបរិបូរណ៌",
+              "command": "Sdau7",
+              "Services": [
+              ]
+            },
+            {
+              "name": "ភូមិគោកជ័រ",
+              "command": "Sdau8",
+              "Services": [
               ]
             }
+          ]
+        },
+        {
+          "name": "ឃុំអណ្ដើកហែប",
+          "villages": [
           ]
         },
         {
           "name": "ឃុំផ្លូវមាស",
           "villages": [
-            {
-              "name": "ភូមិទន្សាន់",
-              "command": "Tonle",
-              "Services": [
-                {
-                  "name": "មេឃុំ(👨‍⚖️)",
-                  "command": "commune_tonle",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677463",
-                      "cellcard": "+85516677463",
-                      "metfone": "+85516677463"
-                    },
-                    "telegram": "@ambulance_tonle_bot"
-                  },
-                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Tonle Village"
-                  }
-                }
-              ]
-            }
           ]
         },
         {
           "name": "ឃុំត្រែង",
           "villages": [
-            {
-              "name": "ភូមិទន្សាន់",
-              "command": "Trang",
-              "Services": [
-                {
-                  "name": "មេឃុំ(👨‍⚖️)",
-                  "command": "commune_trang",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677464",
-                      "cellcard": "+85516677464",
-                      "metfone": "+85516677464"
-                    },
-                    "telegram": "@ambulance_trang_bot"
-                  },
-                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Trang Village"
-                  }
-                }
-              ]
-            }
           ]
         },
         {
           "name": "ឃុំរស្មីសង្ហារ",
           "villages": [
-            {
-              "name": "ភូមិទន្សាន់",
-              "command": "Rusamreah",
-              "Services": [
-                {
-                  "name": "មេឃុំ(👨‍⚖️)",
-                  "command": "commune_rusamreah",
-                  "phone": {
-                    "hotline": {
-                      "smart": "+85516677465",
-                      "cellcard": "+85516677465",
-                      "metfone": "+85516677465"
-                    },
-                    "telegram": "@ambulance_rusamreah_bot"
-                  },
-                  "posterurl": "https://sovann-digital.github.io/sdau-data/images/mayour.png",
-                  "location": {
-                    "latitude": 11.5560,
-                    "longitude": 104.9282,
-                    "address": "Ambulance Station, Rusamreah Village"
-                  }
-                }
-              ]
-            }
           ]
         }
       ]
     }
   ]
-  

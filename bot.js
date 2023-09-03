@@ -70,6 +70,7 @@ bot.action(/village_(.+)/, async (ctx) => {
 
                 await ctx.reply(`សេវាកម្មដែលអាចផ្ដល់ជូន ${selectedVillage.name}:\n${servicesText}`, inlineKeyboard);
             } else {
+                await ctx.reply(`មិនមានទិន្នន័យសម្រាប់ភូមិនេះនៅឡើយ។`);
                 console.log("Selected village not found.");
             }
         } else {
