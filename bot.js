@@ -86,6 +86,10 @@ bot.action('cancel', async (ctx) => {
     await ctx.deleteMessage();
 });
 
+bot.help((ctx) => {
+    const apology = `សូមទោស អត់មានទូរស័ព្ទទំនាក់ទំនងទេ។ មិនអាចធ្វើការហៅទូរស័ព្ទបានទេ។`;
+    ctx.reply(apology);
+});
 
 bot.action(/service_(.+)_(.+)/, async (ctx) => {
     try {
