@@ -41,7 +41,7 @@ bot.action(/commune_(.+)/, async (ctx) => {
                 await ctx.reply(`(🗺)សូមជ្រើសរើសភូមិរបស់អ្នកដែលមានក្នុង ${selectedCommune.name} :`, villageKeyboard);
             } else {
                 // Send a message indicating there is no data for villages in this commune
-                await ctx.reply(`មិនមានទិន្នន័យសម្រាប់ភូមិនេះនៅឡើយ។`);
+                await ctx.reply(`មិនមានទិន្នន័យសម្រាប់ឃុំនេះនៅឡើយ។`);
             }
         } else {
             console.log("Selected commune not found.");
