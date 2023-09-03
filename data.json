@@ -46,8 +46,26 @@
                   }
               },
               {
-                "name": "នគរបាល(👮‍♂️)",
-                "command": "police_sdau",
+                "name": "ប៉ូលីសសង្គ្រោះបន្ទាន់(👮‍♂️)",
+                "command": "emergencypolice_sdau",
+                "phone": {
+                  "hotline": {
+                    "smart": "+85516677462",
+                    "cellcard": "+85516677462",
+                    "metfone": "+85516677462"
+                  },
+                  "telegram": "@ambulance_sdau_bot"
+                },
+                "posterurl":"https://sovann-digital.github.io/sdau-data/images/police.png",
+                "location": {
+                  "latitude": 11.5560,
+                  "longitude": 104.9282,
+                  "address": "Ambulance Station, Sdau Village"
+                }
+              },
+              {
+                "name": "ប៉ូលីសចរាចរណ៍(👮‍♂️)",
+                "command": "traficpolice_sdau",
                 "phone": {
                   "hotline": {
                     "smart": "+85516677462",
