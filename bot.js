@@ -5,10 +5,14 @@ const bot = new Telegraf('6307148351:AAEerLWT4UWMWJZMt5d0X4NigbYewGr0wEk');
 const DATA_URL = 'https://sovann-digital.github.io/sdau-data/data/data-sdau.json';
 const PHOTO_URL = 'https://sovann-digital.github.io/sdau-data/images/poster-start.png';
 
+// Create a Set to store unique user IDs
+const uniqueUsers = new Set();
 
 bot.start(async (ctx) => {
     try {
+        
         await ctx.replyWithPhoto({ url: PHOTO_URL }, { caption: '👇សូមជ្រើសរើសឃុំរបស់អ្នកក្នុងស្រុករតនមណ្ឌល' });
+        uniqueUsers.add(ctx.from.id);
 
         const jsonData = await axios.get(DATA_URL);
         const communes = jsonData.data[0]?.Communes;
@@ -157,6 +161,16 @@ bot.action(/service_(.+)_(.+)/, async (ctx) => {
         } else {
             console.log("Commune data not found.");
         }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+//---------command------------------
+bot.command("user", async (ctx) => {
+    try {
+        // Get the count of unique users
+        const userCount = uniqueUsers.size;
+        await ctx.reply(`Total unique users: ${userCount}`);
     } catch (error) {
         console.error('Error:', error);
     }
